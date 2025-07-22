@@ -7,13 +7,13 @@ This project analyzes over a decade of U.S. domestic flight data to identify key
 ---
 
 ## 📌 Table of Contents
-- [Project Goals](#project-goals)
-- [Key Contributions](#key-contributions)
-- [Technologies Used](#technologies-used)
-- [Results Summary](#results-summary)
-- [Key Visual Insights](#key-visual-insights)
-- [File Structure](#file-structure)
-- [Final Reflections](#final-reflections)
+- [Project Goals](#🎯-project-goals)
+- [Key Contributions](#🧠-key-contributions)
+- [Technologies Used](#🛠-technologies-used)
+- [Results Summary](#📊-results-summary)
+- [Key Visual Insights](#📷-key-visual-insights)
+- [File Structure](#📁-file-structure)
+- [Final Reflections](#💼-final-reflections)
 
 ---
 
@@ -52,36 +52,36 @@ This project analyzes over a decade of U.S. domestic flight data to identify key
 
 ## 📊 Results Summary
 
-| Metric              | Result                    |
-|---------------------|---------------------------|
-| Records Analyzed    | 50,000+                   |
-| Model Used          | Logistic Regression       |
-| Prediction Accuracy | 70–78%                    |
+| Metric              | Result                                                  |
+|---------------------|---------------------------------------------------------|
+| Records Analyzed    | 50,000+                                                 |
+| Model Used          | Logistic Regression                                     |
+| Prediction Accuracy | 70–78%                                                  |
 | Key Insight         | Aircraft age has **no strong correlation** with delay likelihood |
-| Operational Insight | Best time to fly: **6 AM**, Best day: **Monday** |
+| Operational Insight | Best time to fly: **6 AM**, Best day: **Monday**       |
 
 ---
 
 ## 📷 Key Visual Insights
 
-### Aircraft Age vs Delay
-![Avg Delay by Aircraft Age](results/Avg_Delay_By_Aircraft_Age_BarChart.png)
+### Aircraft Age vs Delay  
+![Avg Delay by Aircraft Age](results/Avg_Delay_By_Aircraft_Age_BarChart.PNG)
 
-### Delay Trends by Aircraft Age Over Time
-![Delay Over Time](results/Avg_Delay_By_Aircraft_Age_Over_Time.png)
+### Delay Trends by Aircraft Age Over Time  
+![Delay Over Time](results/Avg_Delay_By_Aircraft_Age_Over_Time.PNG)
 
-### Best Times to Fly (Summary Table)
-![Best Times Table](results/Best_Day_Hour_To_Minimize_Delays_Table.png)
+### Best Times to Fly (Summary Table)  
+![Best Times Table](results/Best_Day_Hour_To_Minimize_Delays_Table.PNG)
 
-### Carrier-Specific Delay Coefficients
-![Carrier Coefficients](results/Carrier_Impact_On_Delay_Coefficients_Over_Time.png)
+### Carrier-Specific Delay Coefficients  
+![Carrier Coefficients](results/Carrier_Impact_On_Delay_Coefficients_Over_Time.PNG)
 
-### Logistic Regression Coefficients (1990–1999)
-![LR Coefficients](results/Logistic_Regression_Coefficients_Over_Time.png)
+### Logistic Regression Coefficients (1990–1999)  
+![LR Coefficients](results/Logistic_Regression_Coefficients_Over_Time.PNG)
 
-### MCMC Diagnostic & KDE
-![KDE](results/Kernel_Density_vs_Target_PDF.png)
-![MCMC](results/MCMC_Rhat_Convergence_Diagnostic.png)
+### MCMC Diagnostic & KDE  
+![KDE](results/Kernel_Density_vs_Target_.PNG)  
+![MCMC](results/MCMC_Rhat_Convergence_Diagnostic.PNG)
 
 ---
 
@@ -104,8 +104,3 @@ This project analyzes over a decade of U.S. domestic flight data to identify key
 This project demonstrates a complete pipeline from **raw data to operational insights**, integrating classical ML with Bayesian diagnostics and robust visualizations. I focused on clarity, interpretability, and real-world applicability — qualities critical for success in **data analytics roles** at financial institutions, tech companies, and consulting firms.
 
 If you're hiring or looking for a candidate with strong **statistical grounding, analytical thinking**, and the ability to convert data into decisions — I'm ready to bring this mindset to your team.
-
----
-
-**🔗 [View full project here](https://github.com/Pochitalunchbox/flight-delay-prediction-analysis)**  
-📧 Feel free to connect with me or reach out for collaboration opportunities.
