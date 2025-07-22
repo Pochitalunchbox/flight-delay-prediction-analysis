@@ -1,110 +1,124 @@
 # ✈️ Flight Delay Prediction & Operational Optimization
 
-**Logistic Regression, Bayesian Modeling, and Data-Driven Insights on U.S. Airline Delays (1990–1999)**
+**Logistic Regression, Bayesian Modeling, and Operational Analytics on U.S. Domestic Flights (1990–1999)**
 
-This project analyzes over a decade of U.S. domestic flight data to identify key factors contributing to delays and to develop a predictive logistic regression model. It combines classic machine learning, probabilistic sampling techniques, and statistical diagnostics to generate actionable insights for airline operations and scheduling optimization.
+This project explores over a decade of U.S. airline data to understand, predict, and optimize around flight delays. By combining machine learning and Bayesian inference, it generates actionable recommendations for airlines and operations teams.
 
 ---
 
-## 📌 Table of Contents
-- [Project Goals](#🎯-project-goals)
-- [Key Contributions](#🧠-key-contributions)
-- [Technologies Used](#🛠-technologies-used)
-- [Results Summary](#📊-results-summary)
-- [Key Visual Insights](#📷-key-visual-insights)
-- [File Structure](#📁-file-structure)
-- [Final Reflections](#💼-final-reflections)
+## 💼 Problem Context
+
+**Business Problem:** Flight delays cost airlines billions annually in fuel, scheduling, labor, and customer dissatisfaction. Can we predict diversions and identify controllable delay drivers?
+
+**Goal:** Use logistic regression and probabilistic diagnostics to:
+- Predict delay-related diversions.
+- Identify delay factors (e.g., aircraft type, carrier, time-of-day).
+- Recommend optimal flight scheduling windows.
 
 ---
 
 ## 🎯 Project Goals
 
-- Analyze U.S. flight delay data (1990–1999) to uncover factors contributing to delays.
-- Build a robust **logistic regression** model to predict flight diversions.
-- Generate operational insights (e.g. optimal departure time/day) to minimize delays.
-- Apply advanced **Bayesian sampling** (Metropolis-Hastings, Gelman-Rubin diagnostics) to evaluate model convergence and reliability.
+- Clean and engineer features from flight and aircraft metadata.
+- Train a **logistic regression model** to predict diversions.
+- Validate model reliability using **Bayesian diagnostics (Metropolis-Hastings, R-hat)**.
+- Deliver **real-world insights** for operations optimization.
 
 ---
 
 ## 🧠 Key Contributions
 
-- Cleaned and merged flight and aircraft metadata (50,000+ records).
-- Engineered domain-specific features like **aircraft age** and **scheduled time segments**.
-- Trained a logistic regression model, achieving up to **78% classification accuracy**.
-- Conducted trend analysis of model coefficients over time for interpretability.
-- Used **MCMC diagnostics** to validate parameter stability and model convergence.
-- Created visual summaries to explain delay patterns by time, airline, and aircraft characteristics.
+- Merged and cleaned 50,000+ flight records.
+- Created engineered features: **aircraft age**, **scheduled time buckets**.
+- Built interpretable models to identify **delay contributors**.
+- Identified **best departure times** and **airline-specific delay patterns**.
+- Applied **Bayesian MCMC sampling** and **R-hat convergence** to validate model stability.
 
 ---
 
-## 🛠 Technologies Used
+## 🛠️ Tech Stack
 
-| Category            | Tools/Techniques                                 |
-|---------------------|--------------------------------------------------|
-| Programming         | Python                                           |
-| Libraries           | Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn|
-| Statistical Methods | Logistic Regression, Cross-Validation, ROC AUC  |
-| Bayesian Modeling   | Metropolis-Hastings, R-hat Convergence, KDE     |
-| IDE                 | Jupyter Notebook                                 |
-| Visualization       | Line charts, bar plots, coefficient trends       |
+| Category            | Tools/Methods                                      |
+|---------------------|----------------------------------------------------|
+| Programming         | Python                                             |
+| Libraries           | Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  |
+| ML Techniques       | Logistic Regression, ROC AUC, Cross-Validation     |
+| Bayesian Methods    | Metropolis-Hastings, Gelman-Rubin (R-hat), KDE     |
+| Visualization       | Coefficient Plots, Bar Charts, KDE, Delay Trends   |
 
 ---
 
 ## 📊 Results Summary
 
-| Metric              | Result                                                  |
+| Metric              | Value                                                  |
 |---------------------|---------------------------------------------------------|
-| Records Analyzed    | 50,000+                                                 |
-| Model Used          | Logistic Regression                                     |
-| Prediction Accuracy | 70–78%                                                  |
-| Key Insight         | Aircraft age has **no strong correlation** with delay likelihood |
-| Operational Insight | Best time to fly: **6 AM**, Best day: **Monday**       |
+| Dataset Size        | 50,000+ flight records                                  |
+| Best Model          | Logistic Regression                                     |
+| Accuracy            | 70–78%                                                  |
+| Key Operational Insight | **Fly at 6 AM on Mondays** to minimize delays       |
+| Top Feature Insight | **Aircraft age has no major delay impact**             |
 
 ---
 
-## 📷 Key Visual Insights
+## 🌟 Highlights & Visual Insights
 
-### Aircraft Age vs Delay  
-![Avg Delay by Aircraft Age](results/Avg_Delay_By_Aircraft_Age_BarChart.PNG)
+### ✈️ Delay by Aircraft Age
+![Delay by Age](results/Avg_Delay_By_Aircraft_Age_BarChart.PNG)  
+> Older planes do not correlate strongly with delays, suggesting maintenance isn’t a primary factor.
 
-### Delay Trends by Aircraft Age Over Time  
-![Delay Over Time](results/Avg_Delay_By_Aircraft_Age_Over_Time.PNG)
+### ⏳ Delay Trends Over Time
+![Delay Over Time](results/Avg_Delay_By_Aircraft_Age_Over_Time.PNG)  
+> Delays remained consistent across years, showing that age effect is stable.
 
-### Best Times to Fly (Summary Table)  
-![Best Times Table](results/Best_Day_Hour_To_Minimize_Delays_Table.PNG)
+### 🕒 Best Times to Fly
+![Best Times Table](results/Best_Day_Hour_To_Minimize_Delays_Table.PNG)  
+> Mondays at 6 AM have the lowest delay probability—ideal for critical travel.
 
-### Carrier-Specific Delay Coefficients  
-![Carrier Coefficients](results/Carrier_Impact_On_Delay_Coefficients_Over_Time.PNG)
+### 🏢 Airline-Specific Impact
+![Carrier Coefficients](results/Carrier_Impact_On_Delay_Coefficients_Over_Time.PNG)  
+> Some carriers have consistently higher delay coefficients across time—insightful for benchmarking.
 
-### Logistic Regression Coefficients (1990–1999)  
-![LR Coefficients](results/Logistic_Regression_Coefficients_Over_Time.PNG)
+### 🔍 Model Coefficients
+![LR Coefficients](results/Logistic_Regression_Coefficients_Over_Time.PNG)  
+> Time of day and carrier are more predictive than aircraft age or route.
 
-### MCMC Diagnostic & KDE  
+### 📈 Bayesian Diagnostics
 ![KDE](results/Kernel_Density_vs_Target_.PNG)  
-![MCMC](results/MCMC_Rhat_Convergence_Diagnostic.PNG)
+![MCMC](results/MCMC_Rhat_Convergence_Diagnostic.PNG)  
+> R-hat values show stable convergence across all model parameters.
 
 ---
 
-## 📁 File Structure
+## 📁 Repository Structure
 
-| File/Folder                               | Purpose                                             |
-|-------------------------------------------|-----------------------------------------------------|
-| `1_metropolis_hastings_sampling.ipynb`    | Custom implementation of MCMC sampling              |
-| `2_mcmc_diagnostics_gelman_rubin.ipynb`   | Gelman-Rubin convergence diagnostic and KDE         |
-| `3_data_setup_directory_structure.ipynb`  | Folder structure and initial data integration       |
-| `4_airline_delay_data_ingestion.ipynb`    | Data loading, cleaning, and merging with metadata   |
-| `5_feature_engineering_metadata_merge.ipynb` | Feature generation and exploration               |
-| `/results/`                               | Contains charts and visual summaries                |
-| `README.md`                               | Project overview and key insights                   |
+| File / Folder                             | Description                                         |
+|------------------------------------------|-----------------------------------------------------|
+| `1_metropolis_hastings_sampling.ipynb`   | Custom MCMC sampling for logistic model             |
+| `2_mcmc_diagnostics_gelman_rubin.ipynb`  | R-hat convergence validation and KDE plots          |
+| `3_data_setup_directory_structure.ipynb` | Folder setup and data prep                          |
+| `4_airline_delay_data_ingestion.ipynb`   | Dataset integration and cleaning                    |
+| `5_feature_engineering_metadata_merge.ipynb` | Custom features (age, time buckets)             |
+| `/results/`                              | Output visuals, tables, plots                       |
 
 ---
 
-## 💼 Final Reflections
+## 🔮 Limitations & Next Steps
 
-This project demonstrates a complete pipeline from **raw data to operational insights**, integrating classical ML with Bayesian diagnostics and robust visualizations. I focused on clarity, interpretability, and real-world applicability — qualities critical for success in **data analytics roles** at financial institutions, tech companies, and consulting firms.
+- Model currently only handles binary classification (diversion vs. non-diversion); multiclass delay severity modeling is a future enhancement.
+- Data only spans 1990–1999; insights may evolve with modern airline logistics and tech.
+- A Tableau or Streamlit-based visualization dashboard would improve stakeholder access.
+
+---
 
 ## 🔗 Author
 
 **Ethan Choo**  
+📍 Singapore | 🎓 Data Science & Business Analytics Graduate (SIM-UOL)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ethanchoo5/) | 🔗 [GitHub](https://github.com/ethan-analytics)
+
+---
+
+> For recruiters, hiring managers, or collaborators—feel free to ⭐ this project or reach out for a demo!
+
 📍 Singapore | 🎓 Data Science & Business Analytics Graduate (SIM-UOL)  
 🔗 [LinkedIn](https://www.linkedin.com/in/ethanchoo5/)  
