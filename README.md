@@ -1,61 +1,111 @@
-# airline-delay-prediction-logreg
-Logistic regression analysis of U.S. airline delay data (1990–1999). Includes custom MCMC sampling, Bayesian diagnostics, and predictive feature engineering for flight delay classification.
+# ✈️ Flight Delay Prediction & Operational Optimization
 
-# ✈️ Flight Delay Prediction & Operational Insights
+**Logistic Regression, Bayesian Modeling, and Data-Driven Insights on U.S. Airline Delays (1990–1999)**
 
-This project explores and predicts U.S. domestic flight delays using a dataset of over 50,000 records. I applied data cleaning, feature engineering, logistic regression modeling, and insights generation using Python and Scikit-learn.
+This project analyzes over a decade of U.S. domestic flight data to identify key factors contributing to delays and to develop a predictive logistic regression model. It combines classic machine learning, probabilistic sampling techniques, and statistical diagnostics to generate actionable insights for airline operations and scheduling optimization.
 
-## 📊 Project Goals
-- Identify factors influencing flight delays.
-- Predict flight diversions using logistic regression (achieved **78% accuracy**).
-- Derive insights to optimize scheduling and reduce disruptions.
+---
+
+## 📌 Table of Contents
+- [Project Goals](#project-goals)
+- [Key Contributions](#key-contributions)
+- [Technologies Used](#technologies-used)
+- [Results Summary](#results-summary)
+- [Key Visual Insights](#key-visual-insights)
+- [File Structure](#file-structure)
+- [Final Reflections](#final-reflections)
+
+---
+
+## 🎯 Project Goals
+
+- Analyze U.S. flight delay data (1990–1999) to uncover factors contributing to delays.
+- Build a robust **logistic regression** model to predict flight diversions.
+- Generate operational insights (e.g. optimal departure time/day) to minimize delays.
+- Apply advanced **Bayesian sampling** (Metropolis-Hastings, Gelman-Rubin diagnostics) to evaluate model convergence and reliability.
+
+---
 
 ## 🧠 Key Contributions
-- Engineered features like plane age and delay duration.
-- Evaluated model performance using cross-validation and ROC AUC.
-- Found weak correlation between plane age and delays.
-- Delivered data-driven scheduling recommendations.
 
-## 🛠 Tools Used
-- Python (Pandas, Scikit-learn, Matplotlib)
-- Jupyter Notebooks
-- Logistic Regression, Data Cleaning, EDA
+- Cleaned and merged flight and aircraft metadata (50,000+ records).
+- Engineered domain-specific features like **aircraft age** and **scheduled time segments**.
+- Trained a logistic regression model, achieving up to **78% classification accuracy**.
+- Conducted trend analysis of model coefficients over time for interpretability.
+- Used **MCMC diagnostics** to validate parameter stability and model convergence.
+- Created visual summaries to explain delay patterns by time, airline, and aircraft characteristics.
 
-## 🔍 Results Summary
-| Metric | Result |
-|--------|--------|
-| Records Analyzed | 50,000+ |
-| Model Used | Logistic Regression |
-| Accuracy | 78% |
-| Key Insight | Older aircraft ≠ higher delay probability |
+---
+
+## 🛠 Technologies Used
+
+| Category            | Tools/Techniques                                 |
+|---------------------|--------------------------------------------------|
+| Programming         | Python                                           |
+| Libraries           | Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn|
+| Statistical Methods | Logistic Regression, Cross-Validation, ROC AUC  |
+| Bayesian Modeling   | Metropolis-Hastings, R-hat Convergence, KDE     |
+| IDE                 | Jupyter Notebook                                 |
+| Visualization       | Line charts, bar plots, coefficient trends       |
+
+---
+
+## 📊 Results Summary
+
+| Metric              | Result                    |
+|---------------------|---------------------------|
+| Records Analyzed    | 50,000+                   |
+| Model Used          | Logistic Regression       |
+| Prediction Accuracy | 70–78%                    |
+| Key Insight         | Aircraft age has **no strong correlation** with delay likelihood |
+| Operational Insight | Best time to fly: **6 AM**, Best day: **Monday** |
+
+---
+
+## 📷 Key Visual Insights
+
+### Aircraft Age vs Delay
+![Avg Delay by Aircraft Age](results/Avg_Delay_By_Aircraft_Age_BarChart.png)
+
+### Delay Trends by Aircraft Age Over Time
+![Delay Over Time](results/Avg_Delay_By_Aircraft_Age_Over_Time.png)
+
+### Best Times to Fly (Summary Table)
+![Best Times Table](results/Best_Day_Hour_To_Minimize_Delays_Table.png)
+
+### Carrier-Specific Delay Coefficients
+![Carrier Coefficients](results/Carrier_Impact_On_Delay_Coefficients_Over_Time.png)
+
+### Logistic Regression Coefficients (1990–1999)
+![LR Coefficients](results/Logistic_Regression_Coefficients_Over_Time.png)
+
+### MCMC Diagnostic & KDE
+![KDE](results/Kernel_Density_vs_Target_PDF.png)
+![MCMC](results/MCMC_Rhat_Convergence_Diagnostic.png)
+
+---
 
 ## 📁 File Structure
-- `01_data-cleaning-aggregation.ipynb`: Merged flight & aircraft data
-- `02_eda-feature-engineering.ipynb`: Feature selection and exploration
-- `03_modeling-logistic-regression.ipynb`: Logistic regression modeling
-- `04_model-evaluation-analysis.ipynb`: Cross-validation & performance
-- `05_insights-recommendations.ipynb`: Final insights and conclusions
 
-# Flight Delay Prediction & Optimization
+| File/Folder                               | Purpose                                             |
+|-------------------------------------------|-----------------------------------------------------|
+| `1_metropolis_hastings_sampling.ipynb`    | Custom implementation of MCMC sampling              |
+| `2_mcmc_diagnostics_gelman_rubin.ipynb`   | Gelman-Rubin convergence diagnostic and KDE         |
+| `3_data_setup_directory_structure.ipynb`  | Folder structure and initial data integration       |
+| `4_airline_delay_data_ingestion.ipynb`    | Data loading, cleaning, and merging with metadata   |
+| `5_feature_engineering_metadata_merge.ipynb` | Feature generation and exploration               |
+| `/results/`                               | Contains charts and visual summaries                |
+| `README.md`                               | Project overview and key insights                   |
 
-Analyze U.S. flight data (1990–1999) to identify key delay factors, optimize departure schedules, and predict flight diversions using logistic regression.
+---
 
-## Key Results
-- 🕒 Identified best times (6 AM) and days (Monday) to minimize delays.
-- ✈️ Found no strong correlation between aircraft age and delays.
-- 🧠 Built logistic regression models with ~70–78% accuracy.
-- 📊 Visualized changing feature importance across 10 years.
+## 💼 Final Reflections
 
-## Technologies
-- Python
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn (Logistic Regression)
+This project demonstrates a complete pipeline from **raw data to operational insights**, integrating classical ML with Bayesian diagnostics and robust visualizations. I focused on clarity, interpretability, and real-world applicability — qualities critical for success in **data analytics roles** at financial institutions, tech companies, and consulting firms.
 
-## Highlights
-- Data merging, cleaning, and feature engineering
-- Trend analysis by time and airline
-- Model interpretation and business relevance
+If you're hiring or looking for a candidate with strong **statistical grounding, analytical thinking**, and the ability to convert data into decisions — I'm ready to bring this mindset to your team.
 
-## 🚀 Author
-[Ethan Choo](https://www.linkedin.com/in/ethanchoo5)
+---
+
+**🔗 [View full project here](https://github.com/Pochitalunchbox/flight-delay-prediction-analysis)**  
+📧 Feel free to connect with me or reach out for collaboration opportunities.
