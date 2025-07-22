@@ -36,5 +36,26 @@ This project explores and predicts U.S. domestic flight delays using a dataset o
 - `04_model-evaluation-analysis.ipynb`: Cross-validation & performance
 - `05_insights-recommendations.ipynb`: Final insights and conclusions
 
+# Flight Delay Prediction & Optimization
+
+Analyze U.S. flight data (1990–1999) to identify key delay factors, optimize departure schedules, and predict flight diversions using logistic regression.
+
+## Key Results
+- 🕒 Identified best times (6 AM) and days (Monday) to minimize delays.
+- ✈️ Found no strong correlation between aircraft age and delays.
+- 🧠 Built logistic regression models with ~70–78% accuracy.
+- 📊 Visualized changing feature importance across 10 years.
+
+## Technologies
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn (Logistic Regression)
+
+## Highlights
+- Data merging, cleaning, and feature engineering
+- Trend analysis by time and airline
+- Model interpretation and business relevance
+
 ## 🚀 Author
 [Ethan Choo](https://www.linkedin.com/in/ethanchoo5)
