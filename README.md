@@ -103,4 +103,8 @@ This project analyzes over a decade of U.S. domestic flight data to identify key
 
 This project demonstrates a complete pipeline from **raw data to operational insights**, integrating classical ML with Bayesian diagnostics and robust visualizations. I focused on clarity, interpretability, and real-world applicability — qualities critical for success in **data analytics roles** at financial institutions, tech companies, and consulting firms.
 
-If you're hiring or looking for a candidate with strong **statistical grounding, analytical thinking**, and the ability to convert data into decisions — I'm ready to bring this mindset to your team.
+## 🔗 Author
+
+**Ethan Choo**  
+📍 Singapore | 🎓 Data Science & Business Analytics Graduate (SIM-UOL)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ethanchoo5/)  
